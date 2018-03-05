@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon",
-    "prestart:prod": "tsc",
+    "prestart:prod": "node build.js --environment=prod",
     "start:prod": "node dist/main.js"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "@nestjs/microservices": "^4.5.8",
     "@nestjs/testing": "^4.5.5",
     "@nestjs/websockets": "^4.5.8",
+    "dotenv": "^5.0.1",
     "redis": "^2.7.1",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^5.5.6",
@@ -23,6 +24,8 @@
   "devDependencies": {
     "@types/node": "^9.3.0",
     "nodemon": "^1.14.1",
-    "ts-node": "^4.1.0"
+    "rimraf": "^2.6.2",
+    "ts-node": "^4.1.0",
+    "yargs": "^11.0.0"
   }
 }
